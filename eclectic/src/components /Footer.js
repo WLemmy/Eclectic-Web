@@ -96,7 +96,7 @@ const Footer = () => {
                    </div>
                     <div className='flex items-center justify-center'>
                     <p className="text-gray-600 font-medium text-center mb-4 md:mb-0">
-                        © 2024 ECLECTIC DOPETECH SOLUTIONS. ALL RIGHTS RESERVED.
+                        © 2024 EClectic Dopetch Solutions. All Rights Reversed.
                     </p>
                     </div>
             </div>

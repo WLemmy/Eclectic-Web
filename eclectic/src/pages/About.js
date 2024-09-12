@@ -73,8 +73,13 @@ const AboutUs = () => {
         >
           <div style={{ height: 500 }}>
             <p className="text-center absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] uppercase font-extralight text-black-100 text-4xl md:text-7xl px-4">
-              More About Eclectic Dopetech Solutions
+              More About 
             </p>
+            <div>
+              <p className= "text-center absolute top-[70%] left-[50%] -translate-x-[50%] -translate-y-[50%] uppercase font-extralight text-black-100 text-5xl md:text-7xl px-4">
+                EClectic Dopetech Solutions
+              </p>
+            </div>
           </div>
         </Parallax>
       </div>

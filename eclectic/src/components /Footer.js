@@ -27,9 +27,7 @@ const Footer = () => {
                     <Link to="/" className="mb-4 md:mb-0">
                         <h1 className="text-2xl font-bold">Eclectic Dopetech Solutions</h1>
                     </Link>
-                    <p className="text-gray-600 font-medium text-center mb-4 md:mb-0">
-                        © 2024 ECLECTIC DOPETECH SOLUTIONS. ALL RIGHTS RESERVED.
-                    </p>
+                    
                     <div className="flex space-x-4 justify-center md:justify-end">
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-400">
                             <FaInstagram className="h-6 w-6" />
@@ -61,12 +59,7 @@ const Footer = () => {
                     <div className="footer-col flex flex-col">
                         <h2 className="text-lg font-semibold text-gray-700 mb-4">Customer Care</h2>
                         <div className="flex flex-col space-y-2">
-                            <button
-                                onClick={openLoginModal}
-                                className="text-gray-700 hover:text-blue-500 hover:underline"
-                            >
-                                Book a Consultation with Us
-                            </button>
+                            <Link to="/delivery" className="text-gray-700 hover:text-blue-500 hover:underline">Book a Consultation</Link>
                             <Link to="/delivery" className="text-gray-700 hover:text-blue-500 hover:underline">Delivery & Returns</Link>
                             <Link to="/faqs" className="text-gray-700 hover:text-blue-500 hover:underline">FAQs</Link>
                         </div>
@@ -96,7 +89,16 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
+                   
                 </div>
+                <div>
+                   <hr className="my-8 border-t-2 border-gray-300 w-100" />
+                   </div>
+                    <div className='flex items-center justify-center'>
+                    <p className="text-gray-600 font-medium text-center mb-4 md:mb-0">
+                        © 2024 ECLECTIC DOPETECH SOLUTIONS. ALL RIGHTS RESERVED.
+                    </p>
+                    </div>
             </div>
 
             {isModalOpen && (

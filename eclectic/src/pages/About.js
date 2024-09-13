@@ -11,7 +11,7 @@ import Convenience from '../assets/Convenience.svg';
 import Excellence from '../assets/Excellence.svg';
 import Community from '../assets/Community.svg';
 
-const AboutUs = () => {
+const About = () => {
     const values = [
         {
             id: 1,
@@ -135,4 +135,4 @@ const AboutUs = () => {
   );
 }
 
-export default AboutUs;
+export default About;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import slide1 from '../assets/slide1.jpg';
 import slide2 from '../assets/slide2.jpg';
 import slide3 from '../assets/slide3.jpg';
+import AboutUs from '../components /AboutUs';
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -40,12 +41,14 @@ function Home() {
   };
 
   return (
+    <div>
     <div
       className="relative flex flex-col items-center justify-center min-h-[70vh] text-center p-4 bg-cover bg-center transition-all duration-500 ease-in-out"
       style={{
         backgroundImage: `url(${slides[currentSlide].image})`,
       }}
     >
+    
       {/* Background overlay with opacity */}
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
@@ -58,6 +61,7 @@ function Home() {
           {slides[currentSlide].text}
         </p>
       </div>
+
 
       {/* Navigation buttons */}
       <button
@@ -72,7 +76,13 @@ function Home() {
       >
         &#10095;
       </button>
+    
+
+    
     </div>
+<AboutUs />
+    </div>
+    
   );
 }
 

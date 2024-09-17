@@ -3,6 +3,8 @@ import slide1 from '../assets/slide1.jpg';
 import slide2 from '../assets/slide2.jpg';
 import slide3 from '../assets/slide3.jpg';
 import AboutUs from '../components /AboutUs';
+import ServicesHome from '../components /Services-home';
+import Contact from './Contact';
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -20,7 +22,8 @@ function Home() {
     {
       image: slide3,
       text: `We work the 'Eclectic Way'.
-      At the core of our business lies a steadfast belief in our methodology for success, what we call the 'Eclectic Way’. We approach software development as a holistic and collaborative process that encompasses all of our service offerings. This comprehensive approach allows us to tackle even the most complex challenges and consistently deliver quality solutions.`,
+      At the core of our business lies a steadfast belief in our methodology for success, what we call the 'Eclectic Way’. 
+      `,
     },
   ];
 
@@ -42,47 +45,44 @@ function Home() {
 
   return (
     <div>
-    <div
-      className="relative flex flex-col items-center justify-center min-h-[70vh] text-center p-4 bg-cover bg-center transition-all duration-500 ease-in-out"
-      style={{
-        backgroundImage: `url(${slides[currentSlide].image})`,
-      }}
-    >
-    
-      {/* Background overlay with opacity */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div
+        className="relative flex flex-col items-center justify-center min-h-[70vh] text-center p-4 bg-cover bg-center transition-all duration-500 ease-in-out"
+        style={{
+          backgroundImage: `url(${slides[currentSlide].image})`,
+        }}
+      >
+        {/* Background overlay with opacity */}
+        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-      {/* Content goes here */}
-      <div className="relative z-10 max-w-3xl px-4 text-white">
-        <h1 className="text-4xl font-bold mb-4">
-          Welcome to Eclectic Dopetech Solutions
-        </h1>
-        <p className="text-lg max-w-2xl mb-6">
-          {slides[currentSlide].text}
-        </p>
+        {/* Content goes here */}
+        <div className="relative z-10 max-w-3xl px-4 text-white">
+          <h1 className="text-4xl font-bold mb-4">
+            Welcome to Eclectic Dopetech Solutions
+          </h1>
+          <p className="text-lg max-w-2xl mb-6">
+            {slides[currentSlide].text}
+          </p>
+        </div>
+
+        {/* Navigation buttons */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-2 rounded-full z-20 hover:bg-opacity-90 transition duration-300"
+        >
+          &#10094;
+        </button>
+        <button
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-2 rounded-full z-20 hover:bg-opacity-90 transition duration-300"
+        >
+          &#10095;
+        </button>
       </div>
 
-
-      {/* Navigation buttons */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-2 rounded-full z-20 hover:bg-opacity-90 transition duration-300"
-      >
-        &#10094;
-      </button>
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-gray-800 bg-opacity-70 text-white p-2 rounded-full z-20 hover:bg-opacity-90 transition duration-300"
-      >
-        &#10095;
-      </button>
-    
-
-    
+      <AboutUs />
+      <ServicesHome />
+      <Contact />
     </div>
-<AboutUs />
-    </div>
-    
   );
 }
 

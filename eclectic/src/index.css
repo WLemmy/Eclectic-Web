@@ -2,22 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* index.css or App.css */
-/* .bg-blur {
-    position: relative;
-  }
-  
-  .bg-blur::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: inherit;
-    background-size: inherit;
-    background-position: inherit;
-    filter: blur(10px); /* Adjust the blur amount as needed */
-    /* z-index: -1; */
-  /* } */
-  
+body{
+  background-color: rgb(243, 244, 246);
+
+}

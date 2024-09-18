@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -24,20 +24,75 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Eclectic Dopetech Solutions</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css">
+  <style>
+    .service-card {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  </style>
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="root">
+    <div class="splide">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide">
+            <div class="service-card">
+              <div class="service-icon">
+                <FaRegLightbulb class="text-blue-500 text-4xl mb-4" />
+              </div>
+              <h2 class="text-xl font-semibold mt-4 mb-2">Digital Transformation</h2>
+              <p class="text-base font-light">We focus on strategizing how to future-proof your business operations, increase efficiency, and embrace innovation.</p>
+            </div>
+          </li>
+          <li class="splide__slide">
+            <div class="service-card">
+              <div class="service-icon">
+                <FaCode class="text-green-500 text-4xl mb-4" />
+              </div>
+              <h2 class="text-xl font-semibold mt-4 mb-2">Software Development</h2>
+              <p class="text-base font-light">We leverage both pro-code and low-code development approaches to build future-ready, scalable software.</p>
+            </div>
+          </li>
+          <!-- More service cards... -->
+        </ul>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var splide = new Splide('.splide', {
+          type: 'loop',
+          perPage: 3,
+          autoplay: true,
+          interval: 3000,
+          pauseOnHover: true,
+          gap: '1rem',
+          breakpoints: {
+            1024: {
+              perPage: 2,
+            },
+            640: {
+              perPage: 1,
+            }
+          },
+        });
+    
+        splide.mount();
+      });
+    </script>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+</div>
   </body>
 </html>

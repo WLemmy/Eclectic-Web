@@ -4,26 +4,42 @@ import slide2 from '../assets/slide2.jpg';
 import slide3 from '../assets/slide3.jpg';
 import AboutUs from '../components /AboutUs';
 import ServicesHome from '../components /Services-home';
+import ServiceMain from '../components /ServiceMain';
 import Contact from './Contact';
+
 
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
       image: slide1,
-      text: `We use progressive technology that's been proven and battle-tested.
-      We handpicked some of the world’s most reputable technology partners to provide our clients with future-ready platforms that promote innovation, scalability, and security.`,
+      text: (
+        <div>
+          <span className="text-blue-500 text-3xl">We use progressive technology that's been proven and battle-tested.</span>
+          <br />
+          We handpicked some of the world’s most reputable technology partners to provide our clients with future-ready platforms that promote innovation, scalability, and security.
+        </div>
+      ),
     },
     {
       image: slide2,
-      text: `As a global team, we work from where it works best.
-      We are a remote-first company. In our experience, this is the most efficient way to build digital products, allowing each member to work where and when it works best for them and the team.`,
+      text: (
+        <div>
+          <span className="text-green-500">As a global team, we work from where it works best.</span>
+          <br />
+          We are a remote-first company. In our experience, this is the most efficient way to build digital products, allowing each member to work where and when it works best for them and the team.
+        </div>
+      ),
     },
     {
       image: slide3,
-      text: `We work the 'Eclectic Way'.
-      At the core of our business lies a steadfast belief in our methodology for success, what we call the 'Eclectic Way’. 
-      `,
+      text: (
+        <div>
+          <span className="text-red-500">We work the 'Eclectic Way'.</span>
+          <br />
+          At the core of our business lies a steadfast belief in our methodology for success, what we call the 'Eclectic Way’.
+        </div>
+      ),
     },
   ];
 
@@ -44,9 +60,9 @@ function Home() {
   };
 
   return (
-    <div>
+    <div >
       <div
-        className="relative flex flex-col items-center justify-center min-h-[70vh] text-center p-4 bg-cover bg-center transition-all duration-500 ease-in-out"
+        className="relative flex flex-col items-center justify-center min-h-[70vh] text-center pt-4  bg-cover bg-center transition-all duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${slides[currentSlide].image})`,
         }}
@@ -56,7 +72,7 @@ function Home() {
 
         {/* Content goes here */}
         <div className="relative z-10 max-w-3xl px-4 text-white">
-          <h1 className="text-4xl font-bold mb-4">
+          <h1 className="text-6xl font-bold mb-4">
             Welcome to Eclectic Dopetech Solutions
           </h1>
           <p className="text-lg max-w-2xl mb-6">
@@ -81,6 +97,7 @@ function Home() {
 
       <AboutUs />
       <ServicesHome />
+      <ServiceMain />
       <Contact />
     </div>
   );

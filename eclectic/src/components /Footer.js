@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaInstagram, FaYoutube, FaTwitter, FaFacebook } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import logo from '../assets/navbar-logo.png';
 
 const Footer = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,13 +22,15 @@ const Footer = () => {
     };
 
     return (
-        <footer className="bg-blue-100 text-gray-800 py-8 mt-12">
+        <footer className="bg-blue-100 text-gray-800 py-8 mt-4">
             <div className="container mx-auto px-4 md:px-8">
                 <div className="flex flex-col md:flex-row md:justify-between items-center">
-                    <Link to="/" className="mb-4 md:mb-0">
-                        <h1 className="text-2xl font-bold">Eclectic Dopetech Solutions</h1>
-                    </Link>
-                    
+                    <div className="mb-0 md:mb-0">
+                        {/* Replacing the text with the logo */}
+                        <Link to="/">
+                            <img src={logo} alt="Logo" className="h-25 w-60 mr-4" />
+                        </Link>
+                    </div>
                     <div className="flex space-x-4 justify-center md:justify-end">
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-blue-400">
                             <FaInstagram className="h-6 w-6" />
@@ -89,16 +92,15 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                   
                 </div>
-                <div>
-                   <hr className="my-8 border-t-2 border-gray-300 w-100" />
-                   </div>
-                    <div className='flex items-center justify-center'>
-                    <p className="text-gray-600 font-medium text-center mb-4 md:mb-0">
-                        © 2024 Eclectic Dopetch Solutions. All Rights Reversed.
+
+                <hr className="my-8 border-t-2 border-gray-300" />
+
+                <div className="flex items-center justify-center">
+                    <p className="text-gray-600 font-medium text-center">
+                        © 2024 Eclectic Dopetech Solutions. All Rights Reserved.
                     </p>
-                    </div>
+                </div>
             </div>
 
             {isModalOpen && (

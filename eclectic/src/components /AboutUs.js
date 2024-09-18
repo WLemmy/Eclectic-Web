@@ -4,9 +4,9 @@ import aboutUsImage from '../assets/aboutUs.jpg'; // Assuming the image is in th
 
 const AboutUs = () => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gray-100 py-12 px-6">
+    <div className="flex flex-col lg:flex-row items-center justify-center min-h-[50vh] bg-gray-100 py-12 px-6">
       {/* Image Section */}
-      <div className="lg:w-1/2 mb-8 lg:mb-0">
+      <div className="lg:w-1/2 mb-8 lg:mb-0 ">
         <img
           src={aboutUsImage}
           alt="About Us"
@@ -38,7 +38,7 @@ const AboutUs = () => {
         </p>
 
         {/* Button to AboutUs page */}
-        <Link to="/aboutus">
+        <Link to="/about">
           <button className="bg-blue-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-600 transition duration-300">
             Get To Know Us
           </button>

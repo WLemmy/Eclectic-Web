@@ -10,6 +10,9 @@ import Products from './pages/Products';
 import Contact from './pages/Contact';
 import ServicesHome from './components /Services-home';
 import FAQ from './components /FAQ';
+import ServiceMain from './components /ServiceMain';
+
+
 
 function App() {
   return (
@@ -24,6 +27,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/services-home" element={<ServicesHome />} />
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/serviceMain/:serviceId" element={<ServiceMain />} />
        
         {/* Add more routes for other pages */}
       </Routes>

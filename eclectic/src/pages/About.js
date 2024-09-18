@@ -72,12 +72,12 @@ const About = () => {
           strength={225}
         >
           <div style={{ height: 500 }}>
-            <p className="text-center absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] uppercase font-extralight text-black-100 text-4xl md:text-7xl px-4">
+            {/* <p className="text-center absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] uppercase font-extralight text-black-100 text-4xl md:text-7xl px-4">
               More About 
-            </p>
+            </p> */}
             <div>
               <p className= "text-center absolute top-[70%] left-[50%] -translate-x-[50%] -translate-y-[50%] uppercase font-extralight text-black-100 text-5xl md:text-7xl px-4">
-                EClectic Dopetech Solutions
+               More About <br/> Eclectic Dopetech Solutions
               </p>
             </div>
           </div>

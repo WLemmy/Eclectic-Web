@@ -37,11 +37,10 @@ function ServicesHome() {
     <div className="py-12 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold text-gray-800">The Right Technology Partner
-          </h2>
+          <h2 className="text-3xl font-extrabold text-gray-800">The Right Technology Partner</h2>
           <div className="flex items-center justify-center mt-6">
             <p className="max-w-2xl text-center text-gray-600">
-            What makes our clients stay with us:
+              What makes our clients stay with us:
             </p>
           </div>
         </div>
@@ -51,17 +50,17 @@ function ServicesHome() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg p-6 text-center hover:shadow-2xl transition duration-300"
+              className="bg-white shadow-lg rounded-lg p-6 text-center transition duration-300 transform hover:bg-blue-500 hover:text-white hover:scale-105 hover:shadow-2xl"
             >
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-32 h-32 mx-auto mb-6" // Enlarge the image
+                className="w-32 h-32 mx-auto mb-6"
               />
-              <h3 className="text-xl font-semibold text-gray-800 mb-4">
+              <h3 className="text-xl font-semibold mb-4">
                 {service.title}
               </h3>
-              <p className="text-gray-600">{service.description}</p>
+              <p>{service.description}</p>
             </div>
           ))}
         </div>

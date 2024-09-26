@@ -17,7 +17,7 @@ const AboutUs = () => {
       {/* Text Section */}
       <div className="lg:w-1/2 max-w-3xl text-center lg:text-left p-6">
         {/* Heading */}
-        <h1 className="text-xl font-bold text-gray-800 mb-6">
+        <h1 className="text-xl font-bold text-yellow-500 mb-6">
           MAXIMIZE EFFICIENCY, MINIMIZE HASSLE
         </h1>
 

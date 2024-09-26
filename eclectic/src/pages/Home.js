@@ -7,7 +7,6 @@ import ServicesHome from '../components /Services-home';
 import ServiceMain from '../components /ServiceMain';
 import Contact from './Contact';
 
-
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
@@ -15,9 +14,8 @@ function Home() {
       image: slide1,
       text: (
         <div>
-          <span className="text-blue-500 text-3xl">We use progressive technology that's been proven and battle-tested.</span>
-          <br />
-          We handpicked some of the world’s most reputable technology partners to provide our clients with future-ready platforms that promote innovation, scalability, and security.
+          <span className="text-yellow-500 text-3xl font-bold md:text-5xl">Lead With Experience, Leap With Intelligence <br /></span>
+          <span className="text-2xl md:text-4xl">At Eclectic, we view technology as a catalyst for transformation, deeply rooted in human experience.</span>
         </div>
       ),
     },
@@ -25,9 +23,9 @@ function Home() {
       image: slide2,
       text: (
         <div>
-          <span className="text-green-500">As a global team, we work from where it works best.</span>
+          <span className="text-yellow-500 text-3xl font-bold md:text-5xl">As a global team, we work from where it works best.</span>
           <br />
-          We are a remote-first company. In our experience, this is the most efficient way to build digital products, allowing each member to work where and when it works best for them and the team.
+          <span className="text-xl md:text-3xl">We are a remote-first company. In our experience, this is the most efficient way to build digital products.</span>
         </div>
       ),
     },
@@ -35,9 +33,9 @@ function Home() {
       image: slide3,
       text: (
         <div>
-          <span className="text-red-500">We work the 'Eclectic Way'.</span>
+          <span className="text-yellow-500 text-3xl font-bold md:text-5xl">We work the 'Eclectic Way'.</span>
           <br />
-          At the core of our business lies a steadfast belief in our methodology for success, what we call the 'Eclectic Way’.
+          <span className="text-xl md:text-3xl">At the core of our business lies a steadfast belief in our methodology for success, what we call the 'Eclectic Way’.</span>
         </div>
       ),
     },
@@ -60,9 +58,9 @@ function Home() {
   };
 
   return (
-    <div >
+    <div>
       <div
-        className="relative flex flex-col items-center justify-center min-h-[70vh] text-center pt-4  bg-cover bg-center transition-all duration-500 ease-in-out"
+        className="relative flex flex-col items-center justify-center min-h-[50vh] md:min-h-[70vh] text-center pt-4 bg-cover bg-center transition-all duration-500 ease-in-out"
         style={{
           backgroundImage: `url(${slides[currentSlide].image})`,
         }}
@@ -71,11 +69,11 @@ function Home() {
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
         {/* Content goes here */}
-        <div className="relative z-10 max-w-3xl px-4 text-white">
-          <h1 className="text-6xl font-bold mb-4">
+        <div className="relative z-10 max-w-xl md:max-w-3xl px-4 text-white">
+          {/* <h1 className="text-4xl md:text-6xl font-bold mb-4">
             Welcome to Eclectic Dopetech Solutions
-          </h1>
-          <p className="text-lg max-w-2xl mb-6">
+          </h1> */}
+          <p className="text-base md:text-lg mb-6">
             {slides[currentSlide].text}
           </p>
         </div>

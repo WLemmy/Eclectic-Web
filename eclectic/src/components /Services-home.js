@@ -50,7 +50,7 @@ function ServicesHome() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white shadow-lg rounded-lg p-6 text-center transition duration-300 transform hover:bg-blue-500 hover:text-white hover:scale-105 hover:shadow-2xl"
+              className="bg-white shadow-lg rounded-lg p-6 text-center transition duration-300 transform hover:bg-blue-300 hover:text-white hover:scale-105 hover:shadow-2xl"
             >
               <img
                 src={service.image}

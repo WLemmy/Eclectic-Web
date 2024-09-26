@@ -68,11 +68,11 @@ const Footer = () => {
                         </div>
                     </div>
                     <div className="footer-col flex flex-col">
-                        <h2 className="text-lg font-semibold text-gray-700 mb-4">Payment Methods</h2>
+                        <h2 className="text-lg font-semibold text-gray-700 mb-4">Services</h2>
                         <div className="flex flex-col space-y-2">
-                            <Link to="/mpesa" className="text-gray-700 hover:text-blue-500 hover:underline">Mpesa</Link>
-                            <Link to="/paypal" className="text-gray-700 hover:text-blue-500 hover:underline">Paypal</Link>
-                            <Link to="/payless" className="text-gray-700 hover:text-blue-500 hover:underline">Payless</Link>
+                            <Link to="/mpesa" className="text-gray-700 hover:text-blue-500 hover:underline">Custom Software</Link>
+                            <Link to="/paypal" className="text-gray-700 hover:text-blue-500 hover:underline">Mobile Application</Link>
+                            <Link to="/payless" className="text-gray-700 hover:text-blue-500 hover:underline">Websites</Link>
                         </div>
                     </div>
                     <div className="footer-col flex flex-col">

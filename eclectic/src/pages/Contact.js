@@ -63,194 +63,228 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 py-8">
-      <div className="w-full max-w-screen-lg bg-contactBlue shadow-md rounded-md overflow-hidden mb-8">
-        <div className="md:flex">
-          {/* Contact Form */}
-          <div className="w-full md:w-1/2 p-8 bg-[#DAEFFA]">
-            <h1 className="text-2xl font-bold mb-6 text-gray-800">
-              Book a Consultation with The Eclectic Team!
-            </h1>
+    <>
+      <div className="text-center py-6 relative">
+  <h1 className="text-4xl font-bold text-gray-900">Ready to get started?</h1>
+  <p className="text-center py-3 text-1xl text-gray-800 mt-2">
+    If you’re looking for a partner for your IT development, we’d love to hear from you.
+    We’ve formed wonderful, <br />long-lasting relationships with so many of our clients,
+    because they know we are there for them and treat their business like our own.
+  </p>
 
-            <h2 className="text-2xl font-bold mb-6 text-gray-800">
-              We can't wait to build something great together.
-            </h2>
-            <Formik
-              initialValues={initialValues}
-              validationSchema={validationSchema}
-              onSubmit={handleSubmit}
-            >
-              {({ isSubmitting }) => (
-                <Form>
-                  <div className="mb-4">
-                    <label
-                      htmlFor="name"
-                      className="block text-gray-700 text-sm font-bold mb-2"
-                    >
-                      Enter your name
-                    </label>
-                    <Field
-                      id="name"
-                      name="name"
-                      type="text"
-                      placeholder="Your name"
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    />
-                    <ErrorMessage
-                      name="name"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
-                  </div>
-                  <div className="mb-4">
-                    <label
-                      htmlFor="email"
-                      className="block text-gray-700 text-sm font-bold mb-2"
-                    >
-                      Enter your email
-                    </label>
-                    <Field
-                      id="email"
-                      name="email"
-                      type="email"
-                      placeholder="Your email"
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    />
-                    <ErrorMessage
-                      name="email"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
-                  </div>
-                  {/* Phone Number Component */}
-                  <div className="mb-4">
-                    <label
-                      htmlFor="phone"
-                      className="block text-gray-700 text-sm font-bold mb-2"
-                    >
-                      Enter your phone number
-                    </label>
-                    <Field
-                      id="phone"
-                      name="phone"
-                      type="text"
-                      placeholder="Your phone number"
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                    />
-                    <ErrorMessage
-                      name="phone"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
-                  </div>
-                  <div className="mb-6">
-                    <label
-                      htmlFor="message"
-                      className="block text-gray-700 text-sm font-bold mb-2"
-                    >
-                      Enter your message
-                    </label>
-                    <Field
-                      id="message"
-                      name="message"
-                      as="textarea"
-                      placeholder="Your message"
-                      rows="4"
-                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
-                    />
-                    <ErrorMessage
-                      name="message"
-                      component="div"
-                      className="text-red-500 text-sm mt-1"
-                    />
-                  </div>
-                  <div className="flex items-center justify-center">
-                    <div className="flex items-center justify-between">
-                      <button
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="bg-blue-300 hover:bg-blue-400 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+  {/* Container for the image and the Contact Us text */}
+  <div className="relative">
+    {/* Blurred background image */}
+    <div
+      className="absolute inset-0 bg-cover bg-center"
+      style={{
+        backgroundImage: `url(${contact})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        opacity: 0.8, // Set opacity to reduce the background visibility
+      }}
+    ></div>
+
+    {/* Contact Us text positioned on the image */}
+    <p
+      className="absolute inset-0 flex items-center justify-center text-blue-400 text-2xl font-bold cursor-pointer"
+      style={{ zIndex: 10 }}
+    >
+      Contact Us
+    </p>
+  </div>
+</div>
+
+
+      <div className="min-h-screen flex flex-col items-center justify-center bg-gray-100 py-8=4">
+        <div className="w-full max-w-screen-lg bg-contactBlue shadow-md rounded-md overflow-hidden mb-8">
+          <div className="md:flex">
+            {/* Contact Form */}
+            <div className="w-full md:w-1/2 p-8 bg-[#DAEFFA]">
+              <h1 className="text-2xl font-bold mb-6 text-gray-800">
+                Book a Consultation with The Eclectic Team!
+              </h1>
+
+              <h2 className="text-2xl font-bold mb-6 text-gray-800">
+                We can't wait to build something great together.
+              </h2>
+              <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+              >
+                {({ isSubmitting }) => (
+                  <Form>
+                    <div className="mb-4">
+                      <label
+                        htmlFor="name"
+                        className="block text-gray-700 text-sm font-bold mb-2"
                       >
-                        {isSubmitting ? "Submitting..." : "Submit"}
-                      </button>
+                        Enter your name
+                      </label>
+                      <Field
+                        id="name"
+                        name="name"
+                        type="text"
+                        placeholder="Your name"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      />
+                      <ErrorMessage
+                        name="name"
+                        component="div"
+                        className="text-red-500 text-sm mt-1"
+                      />
                     </div>
-                  </div>
-                </Form>
+                    <div className="mb-4">
+                      <label
+                        htmlFor="email"
+                        className="block text-gray-700 text-sm font-bold mb-2"
+                      >
+                        Enter your email
+                      </label>
+                      <Field
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Your email"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      />
+                      <ErrorMessage
+                        name="email"
+                        component="div"
+                        className="text-red-500 text-sm mt-1"
+                      />
+                    </div>
+                    {/* Phone Number Component */}
+                    <div className="mb-4">
+                      <label
+                        htmlFor="phone"
+                        className="block text-gray-700 text-sm font-bold mb-2"
+                      >
+                        Enter your phone number
+                      </label>
+                      <Field
+                        id="phone"
+                        name="phone"
+                        type="text"
+                        placeholder="Your phone number"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      />
+                      <ErrorMessage
+                        name="phone"
+                        component="div"
+                        className="text-red-500 text-sm mt-1"
+                      />
+                    </div>
+                    <div className="mb-6">
+                      <label
+                        htmlFor="message"
+                        className="block text-gray-700 text-sm font-bold mb-2"
+                      >
+                        Enter your message
+                      </label>
+                      <Field
+                        id="message"
+                        name="message"
+                        as="textarea"
+                        placeholder="Your message"
+                        rows="4"
+                        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline h-32"
+                      />
+                      <ErrorMessage
+                        name="message"
+                        component="div"
+                        className="text-red-500 text-sm mt-1"
+                      />
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <div className="flex items-center justify-between">
+                        <button
+                          type="submit"
+                          disabled={isSubmitting}
+                          className="bg-blue-300 hover:bg-blue-400 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                        >
+                          {isSubmitting ? "Submitting..." : "Submit"}
+                        </button>
+                      </div>
+                    </div>
+                  </Form>
+                )}
+              </Formik>
+              {/* Success message */}
+              {isSubmitted && (
+                <p className="text-green-600 mt-4">Submitted successfully ✅</p>
               )}
-            </Formik>
-            {/* Success message */}
-            {isSubmitted && (
-              <p className="text-green-600 mt-4">Submitted successfully ✅</p>
-            )}
-          </div>
-          {/* Contact Information */}
-          <div
-            className="relative w-full md:w-1/2 p-8 rounded overflow-hidden"
-            style={{ backgroundColor: "transparent" }}
-          >
-            {/* Blurred background image */}
+            </div>
+            {/* Contact Information */}
             <div
-              className="absolute inset-0 bg-cover bg-center"
-              style={{
-                backgroundImage: `url(${contact})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                opacity: 0.8, // Set opacity to reduce the background visibility
-                zIndex: 1, // Ensure the background stays behind the content
-              }}
-            ></div>
-
-            {/* Content with z-index of 10 */}
-            <div
-              className="relative flex flex-col gap-10"
-              style={{ zIndex: 100 }}
+              className="relative w-full md:w-1/2 p-8 rounded overflow-hidden"
+              style={{ backgroundColor: "transparent" }}
             >
-              <div>
-                <h3 className="font-bold text-lg text-black">
-                  Our Company Location
-                </h3>
+              {/* Blurred background image */}
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{
+                  backgroundImage: `url(${contact})`,
+                  backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  opacity: 0.8, // Set opacity to reduce the background visibility
+                  zIndex: 1, // Ensure the background stays behind the content
+                }}
+              ></div>
 
-                <p className="flex items-center gap-2">
-                  <img src={locationIcon} alt="Location Icon" />
-                  LANGATA ROAD, BUILDING: MARULA KAREN
-                </p>
+              {/* Content with z-index of 10 */}
+              <div
+                className="relative flex flex-col gap-10"
+                style={{ zIndex: 100 }}
+              >
+                <div>
+                  <h3 className="font-bold text-lg text-black">
+                    Our Company Location
+                  </h3>
 
-                <p className="flex items-center gap-2">
-                  <img src={locationIcon} alt="Location Icon" />
-                  Postal Address P.O. Box 9401-20100, Karen Nairobi, Kenya
-                </p>
-              </div>
+                  <p className="flex items-center gap-2">
+                    <img src={locationIcon} alt="Location Icon" />
+                    LANGATA ROAD, BUILDING: MARULA KAREN
+                  </p>
 
-              <div className="relative top-10">
-                <h3 className="font-bold text-lg text-gray-800 mt-10">
-                  Phone Number
-                </h3>
-                <p className="text-black-500 underline underline-offset-2 flex flex-row gap-2">
-                  <img src={phoneIcon} alt="Phone Icon" />
-                  +254722 528 240
-                </p>
-              </div>
+                  <p className="flex items-center gap-2">
+                    <img src={locationIcon} alt="Location Icon" />
+                    Postal Address P.O. Box 9401-20100, Karen Nairobi, Kenya
+                  </p>
+                </div>
 
-              <div className="relative top-10">
-                <h3 className="font-bold text-lg text-gray-800">
-                  Email Address
-                </h3>
-                <p className="text-black-500 underline underline-offset-2 flex items-center gap-2">
-                  <img src={emailIcon} alt="Email Icon" />
-                  info@eclectic-ds.com
-                </p>
+                <div className="relative top-10">
+                  <h3 className="font-bold text-lg text-gray-800 mt-10">
+                    Phone Number
+                  </h3>
+                  <p className="text-black-500 underline underline-offset-2 flex flex-row gap-2">
+                    <img src={phoneIcon} alt="Phone Icon" />
+                    +254722 528 240
+                  </p>
+                </div>
+
+                <div className="relative top-10">
+                  <h3 className="font-bold text-lg text-gray-800">
+                    Email Address
+                  </h3>
+                  <p className="text-black-500 underline underline-offset-2 flex items-center gap-2">
+                    <img src={emailIcon} alt="Email Icon" />
+                    info@eclectic-ds.com
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {notification && (
-        <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 text-center bg-green-500 text-white p-4 rounded-lg shadow-lg">
-          {notification}
-        </div>
-      )}
-    </div>
+        {notification && (
+          <div className="fixed bottom-4 left-1/2 transform -translate-x-1/2 text-center bg-green-500 text-white p-4 rounded-lg shadow-lg">
+            {notification}
+          </div>
+        )}
+      </div>
+    </>
   );
 };
 
